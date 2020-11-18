@@ -3,20 +3,19 @@ const todolistApp = new Vue ({
   data: {
     messageArray: [],
     message: '',
-    selectFlagArray: []
+    selected: null
   },
   methods: {
     addAction : function(){
       this.messageArray.push(this.message);
-      this.selectFlagArray.push(false);
+      this.message = "";
     },
     removeMessage : function(index){
       console.log(this.index);
       this.messageArray.splice(index,1);
-      this.selectFlagArray.splice(index,1);
     },
     selectItem: function(index){
-      this.selectFlagArray[index] = !(this.selectFlagArray[index]);
+      this.selected = index;
     }
   }
 })

@@ -32,16 +32,15 @@
 		<div id="root" class="container d-flex flex-column align-items-center">
 			<img class="logo" src="img/logo-boolean.png" alt="logo-boolean">
 			<div class="d-flex">
-				<input class="w40" v-model="message" placeholder="edit me">
-				<button @click="addAction">SEND</button>
+				<input class="w40" v-on:keyup.enter="addAction" v-model="message" placeholder="edit me">
+				<button @click="addAction" >SEND</button>
 			</div>
 
 			<ul class="list">
 				<li class="list-item d-flex justify-content-between"
 						v-for="(msg,index) in messageArray"
-						v-model="index"
 						@click="selectItem(index)"
-						:class="selectFlagArray[index] ? 'selected': null">
+						:class="selected === index ? 'selected': null">
 							<span>{{msg}}</span>
 							<a @click="removeMessage(index)">
 								<i class="fas fa-times"></i>
