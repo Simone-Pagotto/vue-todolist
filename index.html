@@ -40,12 +40,9 @@
 				<li class="list-item d-flex justify-content-between"
 						v-for="(msg,index) in messageArray"
 						v-model="index"
-
+						@click="selectItem(index)"
 						:class="selectFlagArray[index] ? 'selected': null">
 							<span>{{msg}}</span>
-							<a @click="selectItem(index)">
-								<i class="fas fa-times"></i>
-							</a>
 							<a @click="removeMessage(index)">
 								<i class="fas fa-times"></i>
 							</a>

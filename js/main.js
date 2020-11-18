@@ -10,13 +10,13 @@ const todolistApp = new Vue ({
       this.messageArray.push(this.message);
       this.selectFlagArray.push(false);
     },
-    removeMessage : function(delIndex){
-      console.log(this.delIndex);
-      this.messageArray.splice(delIndex,1);
-      this.selectFlagArray.splice(delIndex,1);
+    removeMessage : function(index){
+      console.log(this.index);
+      this.messageArray.splice(index,1);
+      this.selectFlagArray.splice(index,1);
     },
-    selectItem: function(delIndex){
-      this.selectFlagArray[delIndex] = !(this.selectFlagArray[delIndex]);
+    selectItem: function(index){
+      this.selectFlagArray[index] = !(this.selectFlagArray[index]);
     }
   }
 })
