@@ -1,0 +1,25 @@
+.w40 {
+  width:40vw;
+}
+
+.logo{
+  width: 40vw;
+  margin: 50px 0;
+}
+
+.list {
+  padding:0;
+  background-color: lightgrey;
+  width: 60vw;
+  border-radius: 10px;
+  margin: 50px 0;
+}
+
+.list-item {
+  margin: 15px 40px;
+  padding: 5px 0;
+  border-bottom: 1px solid black;
+  font-weight: 900;
+  font-family: sans-serif;
+  color: black;
+}
