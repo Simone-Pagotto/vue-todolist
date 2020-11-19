@@ -38,10 +38,10 @@
 
 			<ul class="list">
 				<li class="list-item d-flex justify-content-between"
-						v-for="(msg,index) in messageArray"
-						@click="selectItem(index)"
-						:class="selected === index ? 'selected': null">
-							<span>{{msg}}</span>
+						v-for="(msg,index) in messageArray">
+						<!-- PERCHE NON MI FUNZIONA???? -->
+							<span @click="selectItem(index)" class="list-text"
+							:class="{selected : selectedArray[index]}">{{msg}}</span>
 							<a @click="removeMessage(index)">
 								<i class="fas fa-times"></i>
 							</a>
